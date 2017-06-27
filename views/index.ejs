@@ -1,0 +1,52 @@
+<%-include('shared/_header.ejs' ); %>
+
+<%-include('shared/_navbar.ejs', {user:user}); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron text-center alert-warning">
+        <h1><i class="fa fa-exclamation-triangle"></i>&nbsp; Attention: </h1>
+
+        <p>This website is intended to warn anyone who is considering doing business with:</p>
+          <address class="alert alert-info well-inline">
+            <strong>Barry Wilson Home Improvements</strong><br>
+            25 Rockaway Ave<br>
+            Oakland, NJ 07436
+          </address>
+        <p>
+          Our experience with this contractor has been horrid and all documentation is listed below.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%-include('sections/_intro.ejs'); %>
+    </div>
+  </div>
+</div>
+
+
+<div class="container bg-grey">
+
+    <div class="row">
+      <div class="col-md-12">
+        <%-include('sections/_conversations.ejs'); %>
+      </div>
+    </div>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%-include('comments/index.ejs'); %>
+    </div>
+  </div>
+</div>
+
+<%-include('shared/_footer.ejs'); %>

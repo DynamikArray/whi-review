@@ -1,0 +1,52 @@
+/*
+html{height:100%; background-color:#2c3e50;}
+body{height:100%; background-color:#efefef;}
+*/
+body{margin-bottom: 50px;}
+
+.navbar.navbar-footer{min-height:40px !important;}
+.bg-footer{background-color:#2c3e50; color:#efefef;}
+
+.well-white{background-color: #fefefe;}
+.well-inline{display:inline-block;}
+.p-imp-xs{padding:5px !important;}
+.p-b-xs{padding-bottom:5px;}
+.m-b-xs{margin-bottom:5px;}
+.m-b-sm{margin-bottom:10px;}
+.m-b-md{margin-bottom:20px;}
+.m-t-xs{margin-top:5px;}
+.m-t-sm{margin-top:10px;}
+.m-t-md{margin-top: 20px;}
+.m-t-b-xs{margin: 5px 0px 5px 0px;}
+.m-l-r-sm{margin: 0 10px 0 10px;}
+
+
+.email-homeowner{ font-size:14px;    background-color:#efefef; border-radius: 6px;}
+.email-contractor{ font-size:14px;   background-color:#ededed; border-radius: 6px;}
+
+
+div.well{
+  /* height: 250px; */
+}
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 50%;
+  height: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+#logo-container{
+  margin: auto;
+  margin-bottom: 10px;
+  width:200px;
+  height:30px;
+  background-image:url('http://placehold.it/200x30/000000/ffffff/&text=BRAND+LOGO');
+}

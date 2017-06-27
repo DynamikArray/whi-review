@@ -1,0 +1,24 @@
+<%-include('../shared/_header.ejs' ); %>
+
+<%-include('../shared/_navbar.ejs', {user:user}); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Administer Comments</h3>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<% if(comments) { %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%-include('_commentsList') %>
+      </div>
+    </div>
+  </div>
+<% }%>
+
+<%-include('../shared/_footer.ejs'); %>
