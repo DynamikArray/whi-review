@@ -2,7 +2,7 @@
 html{height:100%; background-color:#2c3e50;}
 body{height:100%; background-color:#efefef;}
 */
-body{margin-bottom: 50px;}
+body{margin-bottom: 50px; background-image: url('/assets/img/white-wall-3-2.png'); background-color:#eee}
 
 .navbar.navbar-footer{min-height:40px !important;}
 .bg-footer{background-color:#2c3e50; color:#efefef;}
@@ -21,8 +21,8 @@ body{margin-bottom: 50px;}
 .m-l-r-sm{margin: 0 10px 0 10px;}
 
 
-.email-homeowner{ font-size:14px;    background-color:#efefef; border-radius: 6px;}
-.email-contractor{ font-size:14px;   background-color:#ededed; border-radius: 6px;}
+.email-homeowner{ font-size:14px;    background-color:#fefefe; border-radius: 6px;}
+.email-contractor{ font-size:14px;   background-color:#fefefe; border-radius: 6px;}
 
 
 div.well{
@@ -40,7 +40,7 @@ div.well{
   height: 50%;
   min-width: 200px;
   max-width: 400px;
-  padding: 40px;
+  padding: 10px;
 }
 
 #logo-container{

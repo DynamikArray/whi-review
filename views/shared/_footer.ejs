@@ -1,9 +1,50 @@
-  <div class="navbar navbar-fixed-bottom navbar-default navbar-footer">
+<div class="navbar navbar-fixed-bottom navbar-default navbar-footer">
+
     <div class="container">
       <div class="row bg-footer">
-        <h5>WilsonsHomeImprovementFraud.com - 2017</h5>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><i class=""></i></a>
+        </div>
+
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/">WilsonsHomeImprovementFraud.com</a></li>        
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <% if(!user) { %>
+            <li>
+              <a href="/login"><span class="fa fa-sign-in"></span> Login</a>
+            </li>
+          <% } %>
+          <% if(user) { %>
+            <li>
+
+            </li>
+            <li class="dropdown ">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span> <%=user.local.email%></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Account Options:</li>
+                <% if(user.account_type == 'admin'){ %>
+                  <li><a href="/admin/comments">Comments</a></li>
+                  <li role="separator" class="divider"></li>
+                <%}%>
+                <li class="text-center"><a href="/logout" class="btn btn-sm btn-warning btn-logout" >Logout</a></li>
+              </ul>
+            </li>
+          <% } %>
+        </ul>
+
       </div>
     </div>
-  </div>
+
+
+
+</div>
+
+
+
 </body>
 </html>

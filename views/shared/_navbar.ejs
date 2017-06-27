@@ -11,9 +11,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li class="active"><a href="/">Home</a></li>        
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -32,7 +30,7 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="dropdown-header">Account Options:</li>                            
+              <li class="dropdown-header">Account Options:</li>
               <% if(user.account_type == 'admin'){ %>
                 <li><a href="/admin/comments">Comments</a></li>
                 <li role="separator" class="divider"></li>
