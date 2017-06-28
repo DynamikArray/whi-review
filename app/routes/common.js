@@ -13,7 +13,7 @@ module.exports = function (app,passport){
       user = req.user
     }
 
-    Comments.getAll({isApproved :true, isDeleted:false}, false, (comments, err)=>{
+    Comments.getAll({isApproved :false, isDeleted:false}, false, (comments, err)=>{
       if(!err || comments){
         res.render('index.ejs',{user:user, comments:comments, message:req.flash('addCommentMessage'), timeAgo: TimeAgo});
       }else{

@@ -8,6 +8,29 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <a href="/admin/comments?isApproved=true" class="btn-xs btn btn-success">Approved</a>
+      <a href="/admin/comments?isApproved=false" class="btn-xs btn btn-success">Pending</a>
+      <a href="/admin/comments?isDeleted=true" class="btn-xs btn btn-success">Deleted</a>
+      <h3>Viewing:
+      <% if(query.isApproved == 'true'){ %>
+        Approved
+      <% } %>
+      <% if(query.isApproved == 'false'){ %>
+        Pending
+      <% } %>
+      <% if(query.isDeleted == 'true'){ %>
+        Deleted
+      <% } %>
+       Comments </h3>
+    </div>
+  </div>
+</div>
+
+
+
 <% if(comments) { %>
   <div class="container">
     <div class="row">

@@ -18,19 +18,20 @@ module.exports = function (app,passport){
 
     if(req.body.comment.length <= maxLength){
 
+
       xssFilters.inHTMLData(req.body.comment);
-      cleanQuestion = sanitizeHtml(req.body.comment, {
+      cleanComment = sanitizeHtml(req.body.comment, {
         allowedTags: [""]
       });
 
       xssFilters.inHTMLData(req.body.visitor);
-      cleanQuestion = sanitizeHtml(req.body.visitor, {
+      cleanVisitor = sanitizeHtml(req.body.visitor, {
         allowedTags: [""]
       });
 
       let newComment = new commentsModel({
-        comment: req.body.comment,
-        visitor: req.body.visitor
+        comment: cleanComment,
+        visitor: cleanVisitor
       });
 
       commentsModel.createComment(newComment, (err, comment)=>{
@@ -39,7 +40,7 @@ module.exports = function (app,passport){
           res.redirect('/#comment');
         }else{
           console.log(err);
-          req.flash('addCommentMessage', 'There was an error with your comment.' + err.message);
+          req.flash('addCommentMessage', 'There was an error with your comment. ' + err.message);
           res.redirect('/#comment');
         }
       });//end createComment
