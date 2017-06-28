@@ -1,7 +1,31 @@
+<% if(comments.length > 0) { %>
 <div class="text-center">
   <h3>Comments</h3>
 </div>
 <div id="commentsWrapper" class="text-left">
-
-
+  <%comments.forEach((comment)=>{ %>
+    <div class="panel panel-default m-b-xl">
+      <div class="panel-body p-b-xs">
+        <p><%=comment.comment %> </p>
+        <p class="text-right">
+          <b><%=comment.visitor %></b> -  <em><%=timeAgo(comment.createdAt)%></em>
+        </p>
+      </div>
+      <% if(user.account_type == 'admin') {%>
+        <div class="panel-footer text-right">
+          <a href="/comments/approve/<%=comment._id%>" type="button" class="btn btn-xs btn-success"><i class="fa fa-check-circle"></i>&nbsp; Approve</a>
+          <a href="/comments/delete/<%=comment._id%>" type="button" class="btn btn-xs btn-danger"><i class="fa fa-times-circle"></i>&nbsp; Delete</a>
+        </div>
+      <% } %>
+    </div>
+  <% }) %>
 </div>
+<% }else{ %>
+  <div class="text-center">
+    <h3>No Comments Found...</h3>
+  </div>
+<% } %>
+
+<% if(!user) {%>
+  <%-include('_commentsForm.ejs') %>
+<% } %>
