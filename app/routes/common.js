@@ -5,7 +5,6 @@ TimeAgo = require('node-time-ago');
 module.exports = function (app,passport){
   app.get("/", function(req,res){
 
-
     //setup our user object
     if(!req.user){
       user = false;
