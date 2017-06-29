@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.set("view engine", "ejs"); // set up ejs for templating
-app.use(express.static("public_html"));
+app.use(express.static("dist"));
 
 // required for passport
 
