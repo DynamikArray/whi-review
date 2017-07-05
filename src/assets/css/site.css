@@ -21,6 +21,8 @@ body{margin-bottom: 50px; background-image: url('/assets/img/white-wall-3-2.png'
 .m-t-b-xs{margin: 5px 0px 5px 0px;}
 .m-l-r-sm{margin: 0 10px 0 10px;}
 
+.darkText{color:#333;}
+
 .email-homeowner{ font-size:14px;    background-color:#fefefe; border-radius: 6px;}
 .email-contractor{ font-size:14px;   background-color:#fefefe; border-radius: 6px;}
 

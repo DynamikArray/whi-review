@@ -38,3 +38,9 @@ gulp.task('scripts',function(){
 });
 
 gulp.task('default', ['message','imageMin','minify-css','scripts']);
+
+gulp.task('watch', function(){
+  gulp.watch('src/assets/js/*.js',['scripts']);
+  gulp.watch('src/assets/images/*',['imageMin']);
+  gulp.watch('src/assets/css/*.css',['minify-css']);
+});
