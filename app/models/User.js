@@ -6,12 +6,14 @@ var userSchema = mongoose.Schema({
   //local passport users
   local :{
     email: String,
-    password: String
+    password: String,
+    resetPasswordToken : String,
+    resetPasswordExpires: String
   },
   account_type :{
     default: "user",
     type:   String
-  }
+  },
 });
 
 
