@@ -62,7 +62,7 @@ module.exports = function (app,passport){
     res.render('forgot.ejs', {message: req.flash('message'), error: req.flash('error')});
   })//end /forgot
 
-  app.post("/forgot", function(req, res){
+  app.post("/forgot", function(req, res, next){
     async.waterfall([
       //array of functions to run in order
       function(done){
